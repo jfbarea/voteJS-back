@@ -3,6 +3,7 @@ http = require 'http'
 methodOverride = require 'method-override'
 bodyParser = require 'body-parser'
 errorHandler = require 'errorhandler'
+routes = require '../routes/index'
 
 # log = require('../lib/log.js').Log(settings.LOG_LEVEL);
 app = express()
@@ -17,6 +18,11 @@ app.use methodOverride()
 #app.use express.static path.join __dirname, '../../front'
 
 app.get '/api/hello', (req, res) -> res.send attr: 'HEY!'
+routes.forEach (route) ->
+	try
+		app[route.method](route.path, route.task)
+	catch
+		console.log "Route from path #{route.path} missing"
 
 # Server creation
 
