@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon bin/api.js"
+    "test": "mocha --compilers coffee:coffee-script/register",
+    "start-dev": "nodemon bin/api.coffee",
+    "build": "coffee -o build/ -c src/ "
   },
   "repository": {
     "type": "git",
@@ -18,19 +19,20 @@
   },
   "homepage": "https://github.com/jfbarea/voteJS-back#readme",
   "dependencies": {
-		"body-parser": "^1.15.0",
-		"cli-color": "^1.1.0",
-		"error-handler": "^1.0.0",
-		"errorhandler": "^1.4.3",
-		"express": "^4.13.4",
-		"express-session": "^1.13.0",
-		"lorem-ipsum": "^1.0.3",
-		"method-override": "^2.3.5",
-		"mocha": "^2.4.5",
-		"mongoose": "^4.4.12",
-		"morgan": "^1.7.0",
-		"multer": "^1.1.0",
-		"node-vsphere-soap": "0.0.2-5",
-		"underscore": "^1.8.3"
+    "body-parser": "^1.15.0",
+    "cli-color": "^1.1.0",
+    "coffee-script": "^1.10.0",
+    "error-handler": "^1.0.0",
+    "errorhandler": "^1.4.3",
+    "express": "^4.13.4",
+    "method-override": "^2.3.5",
+    "mocha": "^2.4.5",
+    "mongoose": "^4.4.12",
+    "morgan": "^1.7.0",
+    "multer": "^1.1.0",
+    "should": "^8.3.1",
+    "supertest": "^1.2.0",
+    "underscore": "^1.8.3",
+    "winston": "^2.2.0"
   }
 }
