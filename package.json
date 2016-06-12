@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --compilers coffee:coffee-script/register",
-    "start-dev": "nodemon bin/api.coffee",
-    "build": "coffee -o build/ -c src/ "
+    "test": "coffeelint src/ && mocha --compilers coffee:coffee-script/register src/test",
+    "start-dev": "nodemon src/bin/api.coffee",
+		"build": "coffee -o build/ -c src/ ",
+    "lint": "coffeelint src/"
   },
   "repository": {
     "type": "git",
