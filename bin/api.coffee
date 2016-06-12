@@ -1,7 +1,6 @@
 express = require 'express'
 http = require 'http'
 methodOverride = require 'method-override'
-session = require 'express-session'
 bodyParser = require 'body-parser'
 errorHandler = require 'errorhandler'
 
