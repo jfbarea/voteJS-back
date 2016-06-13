@@ -6,7 +6,7 @@
   "scripts": {
     "test": "coffeelint src/ && mocha --compilers coffee:coffee-script/register src/test",
     "start-dev": "nodemon src/bin/api.coffee",
-		"build": "coffee -o build/ -c src/ ",
+    "build": "coffee -o build/ -c src/ ",
     "lint": "coffeelint src/"
   },
   "repository": {
@@ -23,6 +23,7 @@
     "body-parser": "^1.15.0",
     "cli-color": "^1.1.0",
     "coffee-script": "^1.10.0",
+    "coffeelint": "^1.15.7",
     "error-handler": "^1.0.0",
     "errorhandler": "^1.4.3",
     "express": "^4.13.4",
