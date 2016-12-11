@@ -37,7 +37,7 @@
     "level": "ignore"
   },
   "indentation": {
-    "value": 1,
+    "value": 2,
     "level": "error"
   },
   "line_endings": {
@@ -79,7 +79,7 @@
     "strict": true
   },
   "no_interpolation_in_single_quotes": {
-    "level": "ignore"
+    "level": "error"
   },
   "no_nested_string_interpolation": {
     "level": "warn"
@@ -108,7 +108,7 @@
   "no_trailing_whitespace": {
     "level": "error",
     "allowed_in_comments": false,
-    "allowed_in_empty_lines": true
+    "allowed_in_empty_lines": false
   },
   "no_unnecessary_double_quotes": {
     "level": "error"
@@ -127,7 +127,7 @@
     "level": "ignore"
   },
   "spacing_after_comma": {
-    "level": "ignore"
+    "level": "error"
   },
   "transform_messes_up_line_numbers": {
     "level": "warn"

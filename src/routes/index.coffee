@@ -1,12 +1,16 @@
 constants   = require '../constants'
-users       = require './users'
+user       = require './user'
 
 module.exports = [
 		path   : '/api/user',
-		task   : users.create,
+		task   : user.create,
 		method : constants.POST
 	,
 		path   : '/api/user/:id',
-		task   : users.remove,
+		task   : user.get,
+		method : constants.GET
+	,
+		path   : '/api/user/:id',
+		task   : user.remove,
 		method : constants.DELETE
 ]

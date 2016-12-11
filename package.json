@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "coffeelint src/ && mocha --compilers coffee:coffee-script/register src/test",
-    "start-dev": "nodemon src/bin/api.coffee",
+    "test": "coffeelint src/ && mocha --compilers coffee:coffee-script/register src/test --recursive",
+    "testGeneral": "mocha --compilers coffee:coffee-script/register src/test/general.coffee",
+    "testUser": "mocha --compilers coffee:coffee-script/register src/test/user.coffee",
+    "testUtil": "mocha --compilers coffee:coffee-script/register src/test/util.coffee",
+    "start": "nodemon src/bin/api.coffee",
     "build": "coffee -o build/ -c src/ ",
     "lint": "coffeelint src/"
   },
@@ -20,21 +23,17 @@
   },
   "homepage": "https://github.com/jfbarea/voteJS-back#readme",
   "dependencies": {
-    "body-parser": "^1.15.0",
-    "cli-color": "^1.1.0",
     "coffee-script": "^1.10.0",
     "coffeelint": "^1.15.7",
-    "error-handler": "^1.0.0",
-    "errorhandler": "^1.4.3",
-    "express": "^4.13.4",
-    "method-override": "^2.3.5",
     "mocha": "^2.4.5",
     "mongoose": "^4.4.12",
-    "morgan": "^1.7.0",
-    "multer": "^1.1.0",
+    "restify": "^4.3.0",
     "should": "^8.3.1",
     "supertest": "^1.2.0",
     "underscore": "^1.8.3",
     "winston": "^2.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
   }
 }
